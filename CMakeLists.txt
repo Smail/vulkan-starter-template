@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.30)
-project(VulkanTutorial)
+project(VulkanStarterTemplate)
 
 set(CMAKE_CXX_STANDARD 26)
 
@@ -17,7 +17,7 @@ include_directories(glm/glm)
 add_subdirectory(GSL)
 include_directories(GSL/include)
 
-add_executable(VulkanTutorial main.cpp)
+add_executable(VulkanStarterTemplate main.cpp)
 
 add_compile_options(
         $<$<CXX_COMPILER_ID:GNU>:-Werror=switch>
@@ -25,4 +25,4 @@ add_compile_options(
         $<$<CXX_COMPILER_ID:MSVC>:/we4062>
 )
 
-target_link_libraries(VulkanTutorial Microsoft.GSL::GSL glfw glm::glm Vulkan::Vulkan)
+target_link_libraries(VulkanStarterTemplate Microsoft.GSL::GSL glfw glm::glm Vulkan::Vulkan)
